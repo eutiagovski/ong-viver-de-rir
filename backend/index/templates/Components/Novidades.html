@@ -1,0 +1,43 @@
+
+    <div class="container text-center" style="background-color: #DDD; padding-top: 3rem; padding-bottom: 1rem;">
+        <h2 style="color:darkred;">Fique por dentro das Nossas Novidades!</h2>
+        <div class="row" style="margin-top: 3rem;">
+            <div class="col" style="align-content: center; width: 20%;">
+                <i class="far fa-envelope fa-10x"></i>
+            </div>
+            <div class="col" style="align-content: center; width: 20%; justify-content: center; padding-right: 7%; ">
+                <div class="form-holder">
+                    <form action="." method="POST">
+                      {% csrf_token %}
+                      <div class="form-group" style="margin-top: 2em;">
+                          <div class="row">
+                              <div class="col"><h5>Nome</h5></div>
+                              <div class="col"><input type="nome" name="nome" id="nome" placeholder="Antonio Pedro"></div>
+                          </div>
+                        <div class="row" style="padding-top: 1em;">
+                            <div class="col"><h5>Email</h5></div>
+                            <div class="col"><input type="email" name="e-mail" id="email" placeholder="antonio@exemplo.com.br"></div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#modalNovidades" style="margin-top:1em">Increva-se para Novidades</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalNovidades" tabindex="-1" aria-labelledby="modalNovidadesLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="modalNovidadesLabel">Cadastro confirmado!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Obrigado por se cadastrar em nossa newsletter. Estamos te redicionando para a página principal.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+            </div>
+        </div>
+    </div>

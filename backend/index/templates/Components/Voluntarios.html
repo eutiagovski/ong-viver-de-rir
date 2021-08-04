@@ -1,0 +1,21 @@
+<div class="container" style="background-color: #DDD; padding-top: 3rem; margin-top: 3rem; padding-bottom: 2rem;">
+  <h2 style="color:darkred; text-align: center;">Nosso time de Voluntários</h2>
+  <div class="row" style="margin-top: 3rem; display: flex; align-items: center; justify-content: center;">
+    <div class="flex-container" style="display: flex;justify-content: space-around;">
+      {% for voluntario in voluntarios %}
+    <div class="col" >
+      <div class="card">
+        <img class="card-img-top" src="{{ voluntario.image_url }}" alt="Card image cap">
+        <div class="card-body" style="text-align: center; ">
+          <h7 class="card-title">{{ voluntario.nome }}</h7>
+          <p class="card-text">{{ voluntario.frase }}</p>
+          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+
+
+  </div>
+</div>

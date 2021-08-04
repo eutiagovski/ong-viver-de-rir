@@ -1,0 +1,66 @@
+<div class="footer" style="text-align: center; padding-bottom: 2rem; background-color: #ffde59;">
+    <div class="container">
+        <div class="row" style="margin-top: 3rem;">
+            <div class="col" style="align-content: center; width: 20%; justify-content: center; padding-top: 2rem;">
+                <br>
+                <p><strong>ONG - Viver de Rir</strong></p>
+                <p>Av. Assis Brasil, 3257 - Passo d'Areia, Porto Alegre - RS, Brasil</p>
+                <p>Tel.: (51) 9 9858-9418 </p>
+                <p>E-mail: comunicação@viverderir.org</p>
+            </div>
+            <div class="col" style="margin-top: 3rem;">
+                <p>Onde Atuamos:</p>
+                <div class="row" >
+                    <div class="col">
+                        <div class="dropdown" >
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                              Viadutos
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                {% for viaduto in viadutos %}
+                              <li><button class="dropdown-item" type="button">{{ viaduto.local }}</button></li>
+                                {% endfor %}
+                            </ul>
+                          </div>
+
+                        <div class="dropdown" style="margin-top: 0.5em;">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                              Hospitais
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                {% for hospital in hospitais %}
+                              <li><button class="dropdown-item" type="button">{{ hospital.local }}</button></li>
+                                {% endfor %}
+                            </ul>
+                          </div>
+                          
+                          <div class="dropdown" style="margin-top: 0.5em;">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                              Casas de Repouso
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                {% for casa_repouso in casas_repouso %}
+                              <li><button class="dropdown-item" type="button">{{ casa_repouso.local }}</button></li>
+                                {% endfor %}
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col"
+                style="align-content: center; width: 20%; justify-content: center; margin-top: 3rem;">
+                <p>Acompanhe nossas Redes Sociais</p>
+                <!-- Whatsapp -->
+                <a href="https://api.whatsapp.com/send?phone=5551998589418&text=Sua%20ajuda%20ir%C3%A1%20nos%20auxiliar%20a%20continuar%20fazendo%20o%20bem%2C%20levando%20amor%20e%20carinho%20%C3%A0%20pessoas%20em%20situa%C3%A7%C3%A3o%20de%20fragilidade.%20" target="_blank"><i class="fab fa-whatsapp-square fa-4x" style="padding-right: 1rem; color: black;"></i></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/ongviverderir/" target="_blank"><i class="fab fa-instagram-square fa-5x" style="padding-left: 1rem; padding-right: 1rem; color: black;"></i></a>
+                <!-- Youtube -->
+                <a href="https://www.youtube.com/channel/UCxBodS-aRSXX4K341nd7M8Q" target="_blank"><i class="fab fa-youtube-square fa-5x" style="padding-left: 1rem; padding-right: 1rem; color: black;"></i></a>
+                <!-- Facebook -->
+                <a href="https://www.youtube.com/channel/UCxBodS-aRSXX4K341nd7M8Q" target="_blank"><i class="fab fa-facebook-square fa-4x" style="padding-left: 1rem; color: black;"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+</div>

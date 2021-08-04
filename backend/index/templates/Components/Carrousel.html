@@ -1,0 +1,36 @@
+{% load static %}
+<div class="container" style="background-color: #DDD; padding-top: 0.25rem; padding-bottom: 3rem; margin-top: 3em;" id="acoes">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide d-md-block" style="margin-top: 60px;" data-bs-ride="carousel">
+    <h2 style="color:darkred; text-align: center;">Nossas Ações</h2>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+      <div class="carousel-inner">
+        {% for i in acoes %}
+        {% if i.id == 1 %}
+          <div class="carousel-item active">
+            <p style="margin-top: 5px; padding-top: 1em;"><strong>{{ i.frase }}</strong></p>
+            <img class="d-block w-50 mx-auto"  src="{{ i.image_url }}" alt="..."> 
+          </div>
+
+        {% else %}
+          <div class="carousel-item">
+            <p style="margin-top: 5px; padding-top: 1em; padding-bottom: 3em;"></p><strong>{{ i.frase }}</strong></p>
+            <img class="d-block w-50 mx-auto" src="{{ i.image_url }}" alt="...">
+          </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>

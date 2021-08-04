@@ -1,0 +1,15 @@
+
+    <div class="container text-center" style="background-color: #ffde59; padding-top: 3rem; margin-top: 3rem; padding-bottom: 1rem;">
+        <h2 style="color:darkred; ">Depoimentos</h2>
+        {% for depoimento in depoimentos %}
+        <div class="row" style="margin-top: 3rem;">
+            <div class="col" style="align-content: center; width: 20%;">
+                <img src="{{ depoimento.image_url }}" style="width: 60%; height: 80%; align-items: center;"/>
+            </div>
+            <div class="col" style="align-content: center; width: 20%; justify-content: center; padding-right: 7%; align-items: center; ">
+                <h5>{{depoimento.nome}}</h5>
+                <h7 style="margin-top: 1em;">"{{ depoimento.depoimento }}"</h7>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
