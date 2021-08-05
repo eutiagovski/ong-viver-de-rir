@@ -24,8 +24,7 @@ def index(request):
             viadutos.append(i)
         if i['categoria'] == 'casa_repusos':
             casas_repouso.append(i)
-            
-    
+
 
     if request.method == "POST":
         email = request.POST["e-mail"]

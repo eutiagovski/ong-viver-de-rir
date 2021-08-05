@@ -3,8 +3,8 @@
         <h2 style="color:darkred; ">Depoimentos</h2>
         {% for depoimento in depoimentos %}
         <div class="row" style="margin-top: 3rem;">
-            <div class="col" style="align-content: center; width: 20%;">
-                <img src="{{ depoimento.image_url }}" style="width: 60%; height: 80%; align-items: center;"/>
+            <div class="col" class="d-block w-100 mx-auto">
+                <img src="{{ depoimento.image_url }}" class="d-block w-75 mx-auto"/>
             </div>
             <div class="col" style="align-content: center; width: 20%; justify-content: center; padding-right: 7%; align-items: center; ">
                 <h5>{{depoimento.nome}}</h5>
