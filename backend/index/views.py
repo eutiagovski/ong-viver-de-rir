@@ -1,17 +1,17 @@
 from django.shortcuts import render
-from api.models import FotoPrincipal
-from api.serializer import FotoPrincipalSerializer
 import requests
 from api.models import NewsLetter
-# Create your views here.
+from django.contrib.sites.shortcuts import get_current_site
 
 def index(request):
-    imagem_principal = requests.get('https://www.viverderir.org.br/api/foto-principal/').json()[0]
-    acoes = requests.get('https://www.viverderir.org.br/api/acoes/').json()
-    dados_ong = requests.get('https://www.viverderir.org.br/api/nossos-dados/').json()[-1]
-    voluntarios = requests.get('https://www.viverderir.org.br/api/voluntarios/').json()
-    depoimentos = requests.get('https://www.viverderir.org.br/api/depoimentos/').json()
-    locais_atendidos = requests.get('https://www.viverderir.org.br/api/locais-trabalhados/').json()
+    path = 'http://' + str(get_current_site(request))
+
+    imagem_principal = requests.get( path + '/api/foto-principal/').json()[0]
+    acoes = requests.get( path + '/api/acoes/').json()
+    dados_ong = requests.get( path + '/api/nossos-dados/').json()[-1]
+    voluntarios = requests.get( path + '/api/voluntarios/').json()
+    depoimentos = requests.get( path + '/api/depoimentos/').json()
+    locais_atendidos = requests.get( path + '/api/locais-trabalhados/').json()
 
     hospitais =[]
     viadutos= [] 
