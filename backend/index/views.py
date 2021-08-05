@@ -6,12 +6,12 @@ from api.models import NewsLetter
 # Create your views here.
 
 def index(request):
-    imagem_principal = requests.get('http://viverderir.tiagomachado.dev.br/api/foto-principal/').json()[0]
-    acoes = requests.get('http://viverderir.tiagomachado.dev.br/api/acoes/').json()
-    dados_ong = requests.get('http://viverderir.tiagomachado.dev.br/api/nossos-dados/').json()[-1]
-    voluntarios = requests.get('http://viverderir.tiagomachado.dev.br/api/voluntarios/').json()
-    depoimentos = requests.get('http://viverderir.tiagomachado.dev.br/api/depoimentos/').json()
-    locais_atendidos = requests.get('http://viverderir.tiagomachado.dev.br//api/locais-trabalhados/').json()
+    imagem_principal = requests.get('https://www.viverderir.org.br/api/foto-principal/').json()[0]
+    acoes = requests.get('https://www.viverderir.org.br/api/acoes/').json()
+    dados_ong = requests.get('https://www.viverderir.org.br/api/nossos-dados/').json()[-1]
+    voluntarios = requests.get('https://www.viverderir.org.br/api/voluntarios/').json()
+    depoimentos = requests.get('https://www.viverderir.org.br/api/depoimentos/').json()
+    locais_atendidos = requests.get('https://www.viverderir.org.br/api/locais-trabalhados/').json()
 
     hospitais =[]
     viadutos= [] 
