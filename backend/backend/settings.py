@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'api',
     'index',
     'rest_framework',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -134,4 +133,3 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
